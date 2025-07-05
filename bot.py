@@ -4,6 +4,10 @@ from aiogram.types import Update
 from config import API_TOKEN, WEBHOOK_URL
 from scheduler import scheduler, send_reminder
 
+# Установить текущие экземпляры
+bot.set_current(bot)
+dp.set_current(dp)
+
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 app = FastAPI()
