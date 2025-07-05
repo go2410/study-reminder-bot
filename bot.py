@@ -24,6 +24,7 @@ async def done_handler(message: types.Message):
 async def webhook(request: Request):
     data = await request.json()
     update = Update(**data)
+    print("Update received:", update)
     await dp.process_update(update)
     return {"ok": True}
 
