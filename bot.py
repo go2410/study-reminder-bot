@@ -3,7 +3,7 @@ from fastapi import FastAPI, Request
 from aiogram.types import Update
 from config import API_TOKEN, WEBHOOK_URL
 from scheduler import scheduler, send_reminder
-from app.config import bot, dp
+from config import bot, dp
 
 # Установить текущие экземпляры
 bot.set_current(bot)
